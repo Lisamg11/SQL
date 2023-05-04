@@ -1,0 +1,24 @@
+--Create a bike store database
+
+CREATE TABLE my_store (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, quantity INTEGER, isle INTEGER); 
+insert into my_store values (1, "bike locks", 10,15,1),
+(2, "bike handles", 5,20,1),
+(3, "bells",10,15,1),
+(4, "long seats",25,10,2),
+(5, "wide seats", 25,10,2),
+(6, "front wheels",15, 10,3),
+(7, "back Wheels",15,10,3),
+(8, "tube tires", 10, 20,3),
+(9, "reflector lights",8,10,4),
+(10, "front light", 5,20,4),
+(11, "led wheel lights", 25, 6,4),
+(12, "handle tassles",10,20,1),
+(13, "mirrors", 10,10,4),
+(14, "small assembled bikes",100, 15,5),
+(15, "large assembles bikes",150,15,5);
+
+--display database ordered by price
+Select * from my_store order by price;
+
+--what is the total number of items in the store?
+Select sum(quantity) From my_store
